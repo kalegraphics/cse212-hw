@@ -1,16 +1,14 @@
 /// <summary>
 /// A basic implementation of a Queue
 /// </summary>
+using System.Collections.Generic;
+
 public class PersonQueue
 {
     private readonly List<Person> _queue = new();
 
     public int Length => _queue.Count;
 
-    /// <summary>
-    /// Add a person to the queue
-    /// </summary>
-    /// <param name="person">The person to add</param>
     public void Enqueue(Person person)
     {
         _queue.Insert(0, person);
